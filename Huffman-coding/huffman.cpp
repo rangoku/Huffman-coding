@@ -6,16 +6,6 @@
 
 using namespace std;
 
-using queue_t = priority_queue<Node::ptr, vector<Node::ptr>, greater<Node::ptr>>;
-
-#define CHECK_STREAM(stream, do_if) {  \
-	if (!stream) {                     \
-		cerr << "Error in [" << __FUNCSIG__ << "]: " << strerror(errno) << "Line: " << __LINE__ << endl; \
-		do_if;                         \
-	}                                  \
-}
-
-
 vector<int> get_frequencies(ifstream& ifs) {
 
 	vector<int> f(0x100, 0);
